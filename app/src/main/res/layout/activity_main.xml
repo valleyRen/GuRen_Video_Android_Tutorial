@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="portrait"
+    tools:context="io.xmediaengine.work.xrtc.MainActivity"
+    android:background="#000">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/top_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="298dp"
+            android:orientation="horizontal">
+
+            <SurfaceView
+                android:id="@+id/surfaceView_my"
+                android:layout_width="180dp"
+                android:layout_height="320dp"/>
+
+            <SurfaceView
+                android:id="@+id/surfaceView1"
+                android:layout_width="180dp"
+                android:layout_height="320dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="384dp"
+            android:orientation="horizontal">
+
+            <SurfaceView
+                android:id="@+id/surfaceView2"
+                android:layout_width="180dp"
+                android:layout_height="320dp"/>
+
+            <SurfaceView
+                android:id="@+id/surfaceView3"
+                android:layout_width="180dp"
+                android:layout_height="320dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--<RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <SurfaceView
+            android:id="@+id/surfaceView_me"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            tools:layout_editor_absoluteX="179dp"
+            tools:layout_editor_absoluteY="55dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <SurfaceView
+            android:id="@+id/surfaceView_1"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="275dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/surfaceView_3"
+            android:layout_alignStart="@+id/surfaceView_3" />
+
+        <SurfaceView
+            android:id="@+id/surfaceView_2"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <SurfaceView
+            android:id="@+id/surfaceView_3"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            tools:layout_editor_absoluteX="179dp"
+            tools:layout_editor_absoluteY="275dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginEnd="14dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/surfaceView_me"
+            android:layout_toStartOf="@+id/surfaceView_me" />
+    </RelativeLayout>
+-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+    <Button
+        android:id="@+id/start_rtc"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:text="start"
+        android:onClick="onClickStart"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/stop_rtc"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:text="停止"
+        android:onClick="onClickStop" />
+
+    <!--<TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ROOMID:"
+        android:layout_above="@+id/room_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp"
+        android:textColor="#fff"/>
+
+        <EditText
+            android:id="@+id/room_id"
+            android:layout_width="92dp"
+            android:layout_height="42dp"
+            android:layout_above="@+id/btMuteVideo"
+            android:layout_centerHorizontal="true"
+            android:maxLength="20"
+            android:numeric="integer"
+            android:text="3456"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="7dp"
+            android:textColor="#fff"/>-->
+
+        <Button
+            android:id="@+id/button_change"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:onClick="onClickChange"
+            android:visibility="gone"
+            android:text="换位" />
+
+
+
+    <Button
+        android:id="@+id/btMuteAudio"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:onClick="onClickMuteLocalAudio"
+        android:text="关闭声音" />
+
+    <Button
+        android:id="@+id/btMuteVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:onClick="onClickMuteLocalVideo"
+        android:text="关闭视频" />
+
+    </LinearLayout>
+
+</RelativeLayout>
